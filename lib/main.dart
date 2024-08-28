@@ -13,8 +13,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(    
         appBar: AppBar(
           title: Text("Page Title"),
-        ), 
+          backgroundColor: Color.fromARGB(138, 136, 255, 180),
+        ),
+        backgroundColor: Color.fromARGB(255, 0, 180, 66), 
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
