@@ -12,10 +12,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(    
         appBar: AppBar(
-          title: Text("Page Title"),
-          backgroundColor: Color.fromARGB(138, 136, 255, 180),
+          title: Text("Page Title"),          
+          backgroundColor: Color.fromARGB(195, 4, 170, 65),
         ),
-        backgroundColor: Color.fromARGB(255, 0, 180, 66), 
+        body: Text("Body"),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+          label: "Home",
+          icon: Icon(Icons.home)
+            ), BottomNavigationBarItem(
+          label: "Home",
+          icon: Icon(Icons.home)
+            )
+          ],
+        ),
       ),
       debugShowCheckedModeBanner: false,
     );
