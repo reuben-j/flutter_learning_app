@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 // https://api.flutter.dev/flutter/material/Icons-class.html
@@ -41,14 +39,14 @@ class _MyAppState extends State<MyApp> {
                 ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        button_name = "Next";
+                        button_name = "Yeiw";
                       });
                     },
                     child: Text(button_name),),
                     ElevatedButton(
                     onPressed: () {
                       setState(() {
-                        button_name = "Next";
+                        button_name = "Yeiw";
                       });
                     },
                     child: Text(button_name),)
@@ -59,11 +57,11 @@ class _MyAppState extends State<MyApp> {
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
-                label: "Home",
+                label: "Yo Bro",
                 backgroundColor: Colors.black,
                 icon: Icon(Icons.home, color: Colors.black, size: 24)),
             BottomNavigationBarItem(
-                label: "Settings",
+                label: "Hey man",
                 icon: Icon(Icons.settings, color: Colors.black, size: 24))
           ],
           currentIndex: num1,
