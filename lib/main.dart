@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 // https://api.flutter.dev/flutter/material/Icons-class.html
@@ -29,14 +31,30 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: const Color.fromARGB(195, 4, 170, 65),
         ),
         body: Center(
-          child: ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  button_name = "Next";
-                });
-                
-              },
-              child: Text(button_name),),
+          child: SizedBox(
+            width: double.infinity,
+            
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        button_name = "Next";
+                      });
+                    },
+                    child: Text(button_name),),
+                    ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        button_name = "Next";
+                      });
+                    },
+                    child: Text(button_name),)
+              ],
+            ),
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
