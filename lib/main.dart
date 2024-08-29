@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           title: const Text("Page Title"),
           backgroundColor: const Color.fromARGB(195, 4, 170, 65),
         ),
-        body: const Text("Body"),
+        body: const Center(child: Text("Body")),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
