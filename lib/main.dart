@@ -19,7 +19,13 @@ class MyApp extends StatelessWidget {
           title: const Text("Page Title"),
           backgroundColor: const Color.fromARGB(195, 4, 170, 65),
         ),
-        body: const Center(child: Text("Body")),
+        body: Center(
+          child: ElevatedButton(
+              onPressed: () {
+                print("Button");
+              },
+              child: const Text("New")),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
