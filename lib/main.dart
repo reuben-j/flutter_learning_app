@@ -35,8 +35,8 @@ class _MyAppState extends State<MyApp> {
             width: double.infinity,
             
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ElevatedButton(
                     onPressed: () {
