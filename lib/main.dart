@@ -9,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -30,13 +30,19 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           child: SizedBox(
-            width: double.infinity,
+            height: double.infinity,
             
-            child: Column(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.amberAccent,
+                    backgroundColor: Color.fromARGB(1, 255, 0, 0),
+                    shadowColor: const Color.fromARGB(255, 0, 170, 255),
+                    
+                  ),
                     onPressed: () {
                       setState(() {
                         button_name = "Yeiw";
@@ -57,11 +63,11 @@ class _MyAppState extends State<MyApp> {
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
-                label: "Yo Bro",
+                label: "Home",
                 backgroundColor: Colors.black,
                 icon: Icon(Icons.home, color: Colors.black, size: 24)),
             BottomNavigationBarItem(
-                label: "Hey man",
+                label: "Settings",
                 icon: Icon(Icons.settings, color: Colors.black, size: 24))
           ],
           currentIndex: num1,
