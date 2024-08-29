@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+// https://api.flutter.dev/flutter/material/Icons-class.html
+// flutter icons^^
+
 void main() { // this function is called when button 'run' is hit
   runApp(const MyApp());
 }
@@ -12,18 +15,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(    
         appBar: AppBar(
-          title: Text("Page Title"),          
-          backgroundColor: Color.fromARGB(195, 4, 170, 65),
+          title: const Text("Page Title"),          
+          backgroundColor: const Color.fromARGB(195, 4, 170, 65),
         ),
-        body: Text("Body"),
+        body: const Text("Body"),
         bottomNavigationBar: BottomNavigationBar(
-          items: [
+          items: const [
             BottomNavigationBarItem(
           label: "Home",
           icon: Icon(Icons.home)
             ), BottomNavigationBarItem(
-          label: "Home",
-          icon: Icon(Icons.home)
+          label: "Settings",
+          icon: Icon(
+            Icons.settings,
+            color: Colors.black,
+            size: 24
+            )
             )
           ],
         ),
