@@ -17,9 +17,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String button_name = "Click";
-
   String button2 = "Nice one!";
-
   int num1 = 0;
 
   @override
@@ -50,6 +48,12 @@ class _MyAppState extends State<MyApp> {
                 label: "Settings",
                 icon: Icon(Icons.settings, color: Colors.black, size: 24))
           ],
+          currentIndex: num1,
+          onTap: (int index){
+            setState(() {
+              num1 = index;
+            });
+          },
         ),
       ),
       debugShowCheckedModeBanner: false,
