@@ -59,7 +59,8 @@ class _MyAppState extends State<MyApp> {
                     child: Text(button_name),)
               ],
             ),
-          ) : Image.network('https://static.scientificamerican.com/sciam/cache/file/F60B9C8C-5168-4933-AB4C2E3B9D63B483_source.jpg?w=1350'),
+          ) : Image.asset('images/PEAPrac1.png'),
+
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
