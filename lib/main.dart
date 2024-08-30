@@ -59,7 +59,8 @@ class _MyAppState extends State<MyApp> {
                     child: Text(button_name),)
               ],
             ),
-          ) : Image.asset('images/PEAPrac1.png'),
+          ) : Image.asset('images/PEAPrac1.png')
+          
 
         ),
         bottomNavigationBar: BottomNavigationBar(
