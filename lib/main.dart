@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String button_name = "Click";
   String button2 = "Nice one!";
-  int num1 = 0;
+  int currentIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +26,14 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Page Title"),
-          backgroundColor: const Color.fromARGB(195, 4, 170, 65),
+          backgroundColor: const Color.fromARGB(255, 93, 153, 255),
         ),
         body: Center(
-          child: SizedBox(
+          // if else statement to change what view is seen depending on the index
+          child: currentIndex == 0 ? Container(
             height: double.infinity,
+            width: double.infinity,
+            color: const Color.fromARGB(255, 216, 255, 254),
             
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -38,10 +41,8 @@ class _MyAppState extends State<MyApp> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.amberAccent,
-                    backgroundColor: Color.fromARGB(1, 255, 0, 0),
-                    shadowColor: const Color.fromARGB(255, 0, 170, 255),
-                    
+                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    backgroundColor: Color.fromARGB(255, 162, 0, 255),
                   ),
                     onPressed: () {
                       setState(() {
@@ -58,7 +59,7 @@ class _MyAppState extends State<MyApp> {
                     child: Text(button_name),)
               ],
             ),
-          ),
+          ) : Image.network('https://static.scientificamerican.com/sciam/cache/file/F60B9C8C-5168-4933-AB4C2E3B9D63B483_source.jpg?w=1350'),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
@@ -70,10 +71,10 @@ class _MyAppState extends State<MyApp> {
                 label: "Settings",
                 icon: Icon(Icons.settings, color: Colors.black, size: 24))
           ],
-          currentIndex: num1,
+          currentIndex: currentIndex,
           onTap: (int index){
             setState(() {
-              num1 = index;
+              currentIndex = index;
             });
           },
         ),
