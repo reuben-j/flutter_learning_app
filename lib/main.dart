@@ -56,9 +56,20 @@ class _MyAppState extends State<MyApp> {
                         button_name = "Yeiw";
                       });
                     },
+                    child: Text("Nav"),),
+                    ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                    backgroundColor: Color.fromARGB(255, 162, 0, 255),
+                  ),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext){
+                        return const pagetwo();
+                      },));
+                    },
                     child: Text(button_name),)
               ],
-            ),
+            ), 
           ) : Image.asset('images/PEAPrac1.png')
           
 
@@ -83,5 +94,14 @@ class _MyAppState extends State<MyApp> {
       ),
       debugShowCheckedModeBanner: false,
     );
+  }
+}
+
+class pagetwo extends StatelessWidget {
+  const pagetwo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
