@@ -81,7 +81,7 @@ class _MyAppState extends State<MyApp> {
                 backgroundColor: Colors.black,
                 icon: Icon(Icons.home, color: Colors.black, size: 24)),
             BottomNavigationBarItem(
-                label: "Settings",
+                label: "Settings Tab",
                 icon: Icon(Icons.settings, color: Colors.black, size: 24))
           ],
           currentIndex: currentIndex,
