@@ -133,11 +133,32 @@ class _FourthPageState extends State<FourthPage> {
         foregroundColor: const Color.fromARGB(255, 0, 0, 0),
         backgroundColor: const Color.fromARGB(255, 255, 174, 0),
       ),
-      bottomNavigationBar: const ListBody(
-        children: [
-          
-        ],
-      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(onPressed: () {
+                print("Hello");
+              }, child: const Text("Hello button")),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                height: 100,
+                width: 100,
+                child: ElevatedButton(onPressed: () {
+                  print("Bye");
+                }, child: const Text("Bye button")),
+              ),
+            )
+            
+        
+          ],
+        ),
+      )
+      
     );
   }
 }
