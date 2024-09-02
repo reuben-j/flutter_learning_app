@@ -4,7 +4,6 @@ void main() {
   runApp(const NavApp());
 }
 
-
 class NavApp extends StatefulWidget {
   const NavApp({super.key});
 
@@ -13,12 +12,11 @@ class NavApp extends StatefulWidget {
 }
 
 class _NavAppState extends State<NavApp> {
-
-  
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: FirstPage(), // due to context's needing to be able to access eachother and layering,
+      home:
+          FirstPage(), // due to context's needing to be able to access eachother and layering,
       // create a new class for first page and implement it like this
       debugShowCheckedModeBanner: false,
     );
@@ -37,26 +35,26 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("First Page"),
-        ),
-        body: Center(
-          child: SizedBox(
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
+      appBar: AppBar(
+        title: const Text("First Page"),
+      ),
+      body: Center(
+        child: SizedBox(
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
                 foregroundColor: const Color.fromARGB(255, 1, 1, 1),
-                backgroundColor: const Color.fromARGB(255, 30, 255, 0)
-              ), onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
-                  return const SecondPage();
-                }));
-              },
-              child: const Text("Button"),
-            ),
+                backgroundColor: const Color.fromARGB(255, 30, 255, 0)),
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (BuildContext context) {
+                return const SecondPage();
+              }));
+            },
+            child: const Text("Button"),
           ),
-        ), 
-
-      );
+        ),
+      ),
+    );
   }
 }
 
@@ -72,23 +70,23 @@ class SecondPage extends StatelessWidget {
         title: const Text("Second Page"),
       ),
       body: Center(
-          child: SizedBox(
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
+        child: SizedBox(
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
                 foregroundColor: const Color.fromARGB(255, 1, 1, 1),
-                backgroundColor: const Color.fromARGB(255, 30, 255, 0)
-              ), onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
-                  return const ThirdPage();
-                }));
-              },
-              child: const Text("Button"),
-            ),
+                backgroundColor: const Color.fromARGB(255, 30, 255, 0)),
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (BuildContext context) {
+                return const ThirdPage();
+              }));
+            },
+            child: const Text("Button"),
           ),
-        ), 
-
+        ),
+      ),
     );
-}
+  }
 }
 
 class ThirdPage extends StatelessWidget {
@@ -96,17 +94,41 @@ class ThirdPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: const Text("Third Page"),),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Third Page"),
+      ),
       body: Center(
         child: SizedBox(
-          child: ElevatedButton(onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
-                  return const FirstPage();
-                }));
-          }, child: const Text("Button"),),
-          
+          child: ElevatedButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (BuildContext context) {
+                return const FourthPage();
+              }));
+            },
+            child: const Text("Button"),
+          ),
         ),
       ),
     );
+  }
 }
+
+class FourthPage extends StatefulWidget {
+  const FourthPage({super.key});
+
+  @override
+  State<FourthPage> createState() => _FourthPageState();
+}
+
+class _FourthPageState extends State<FourthPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Fourth Page - Stateful Widget :)"),
+      ),
+    );
+  }
 }
