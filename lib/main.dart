@@ -55,7 +55,7 @@ class _FirstPageState extends State<FirstPage> {
             ),
           ),
         ), 
-        
+
       );
   }
 }
@@ -69,7 +69,36 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Second Page")
+        title: const Text("Second Page"),
+      ),
+      body: Center(
+          child: SizedBox(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                foregroundColor: const Color.fromARGB(255, 1, 1, 1),
+                backgroundColor: const Color.fromARGB(255, 30, 255, 0)
+              ), onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                  return const ThirdPage();
+                }));
+              },
+              child: const Text("Button"),
+            ),
+          ),
+        ), 
+
+    );
+}
+}
+
+class ThirdPage extends StatelessWidget {
+  const ThirdPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Third page")
       ),
     );
   }
