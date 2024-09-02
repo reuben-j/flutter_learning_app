@@ -18,12 +18,14 @@ class _NavAppState extends State<NavApp> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: FirstPage(),
+      home: FirstPage(), // due to context's needing to be able to access eachother and layering,
+      // create a new class for first page and implement it like this
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
+// below is the actual code for firstpage()
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
 
@@ -57,6 +59,8 @@ class _FirstPageState extends State<FirstPage> {
       );
   }
 }
+
+// this is the code for the second page
 
 class SecondPage extends StatelessWidget {
   const SecondPage({super.key});
