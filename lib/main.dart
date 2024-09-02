@@ -1,38 +1,37 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const nap_app());
+  runApp(const NavApp());
 }
 
-// ignore: camel_case_types
-class nap_app extends StatefulWidget {
-  const nap_app({super.key});
+
+class NavApp extends StatefulWidget {
+  const NavApp({super.key});
 
   @override
-  State<nap_app> createState() => _nap_appState();
+  State<NavApp> createState() => _NavAppState();
 }
 
-class _nap_appState extends State<nap_app> {
+class _NavAppState extends State<NavApp> {
 
   
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: firstPage(),
+      home: FirstPage(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
 
-class firstPage extends StatefulWidget {
-  const firstPage({super.key});
+class FirstPage extends StatefulWidget {
+  const FirstPage({super.key});
 
   @override
-  State<firstPage> createState() => _firstPageState();
+  State<FirstPage> createState() => _FirstPageState();
 }
 
-class _firstPageState extends State<firstPage> {
-  String buttonName = "Yep";
+class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,19 +39,17 @@ class _firstPageState extends State<firstPage> {
           title: const Text("First Page"),
         ),
         body: Center(
-          child: Container(
-            height: 240,
-            width: 300,
+          child: SizedBox(
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 foregroundColor: const Color.fromARGB(255, 1, 1, 1),
                 backgroundColor: const Color.fromARGB(255, 30, 255, 0)
               ), onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
-                  return const secondPage();
+                  return const SecondPage();
                 }));
               },
-              child: Text(buttonName),
+              child: const Text("Button"),
             ),
           ),
         ), 
@@ -61,8 +58,8 @@ class _firstPageState extends State<firstPage> {
   }
 }
 
-class secondPage extends StatelessWidget {
-  const secondPage({super.key});
+class SecondPage extends StatelessWidget {
+  const SecondPage({super.key});
 
   @override
   Widget build(BuildContext context) {
