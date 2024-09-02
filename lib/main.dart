@@ -97,9 +97,13 @@ class ThirdPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(appBar: AppBar(title: const Text("Third Page"),),
-      body: const Center(
+      body: Center(
         child: SizedBox(
-          child: Text("Hello"),
+          child: ElevatedButton(onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                  return const FirstPage();
+                }));
+          }, child: const Text("Button"),),
           
         ),
       ),
