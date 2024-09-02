@@ -127,7 +127,16 @@ class _FourthPageState extends State<FourthPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: false,
+        shape: const BeveledRectangleBorder(),
         title: const Text("Fourth Page - Stateful Widget :)"),
+        foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+        backgroundColor: const Color.fromARGB(255, 255, 174, 0),
+      ),
+      bottomNavigationBar: const ListBody(
+        children: [
+          
+        ],
       ),
     );
   }
