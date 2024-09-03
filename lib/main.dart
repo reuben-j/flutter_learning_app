@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const NavApp());
@@ -19,7 +20,7 @@ class _NavAppState extends State<NavApp> {
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.blue,
         ),
-        
+        textTheme: GoogleFonts.emilysCandyTextTheme(),
       ),
       // darkTheme: ThemeData.dark(),
 
@@ -163,10 +164,8 @@ class _FourthPageState extends State<FourthPage> {
                 ),
                 
               ),
-            ), const Text('Hello, is this working?'
-            style: TextStyle(
-              
-            ))
+            ), const Text('Hello, is this working?',
+            )
           ],
         ),
       )
