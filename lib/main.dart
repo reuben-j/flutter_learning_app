@@ -14,9 +14,17 @@ class NavApp extends StatefulWidget {
 class _NavAppState extends State<NavApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.blue,
+        ),
+        
+      ),
+      // darkTheme: ThemeData.dark(),
+
       home:
-          FirstPage(), // due to context's needing to be able to access eachother and layering,
+          const FirstPage(), // due to context's needing to be able to access eachother and layering,
       // create a new class for first page and implement it like this
       debugShowCheckedModeBanner: false,
     );
@@ -154,12 +162,9 @@ class _FourthPageState extends State<FourthPage> {
                 ),
               ),
             )
-            
-        
           ],
         ),
       )
-      
     );
   }
 }
