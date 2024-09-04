@@ -20,7 +20,7 @@ class _NavAppState extends State<NavApp> {
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.blue,
         ),
-        textTheme: GoogleFonts.emilysCandyTextTheme(),
+        textTheme: GoogleFonts.openSansTextTheme(),
       ),
       // darkTheme: ThemeData.dark(),
 
@@ -164,7 +164,14 @@ class _FourthPageState extends State<FourthPage> {
                 ),
                 
               ),
-            ), const Text('Hello, is this working?',
+            ), Container(
+              alignment: ,
+              child: const Text('Hello, is this working?', 
+              style: TextStyle(
+                fontSize: 300,
+                overflow: 
+              ),
+              ),
             )
           ],
         ),
