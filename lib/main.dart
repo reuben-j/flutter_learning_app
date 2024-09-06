@@ -199,29 +199,43 @@ class _PageBuilderState extends State<PageBuilder> {
       
         body: const Center(
           
-          child: Row(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
         
             children: [
               Spacer(),
-              Text("Hey!"),
-              Spacer(),
-              Text("Middle man :("),
-              Spacer(),
-              Text("Last!"),
-              Spacer(),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text("In a cloumn?????"),
-                  Text("Really?")
-                ],        
+              Image(image: AssetImage('images/Q8.png'),
+              width: 300,
               ),
+              Spacer(),
+              Divider(
+                color: Colors.black,
+                endIndent: 0,
+                height: 20,
+              ),
+              Row(
+                children: [
+                  ElevatedButton(
+                    style: ButtonStyle(
+                    ),
+                    onPressed: null,
+                    child: Text("Nothing"),
+                  ),
+                  ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: Colors.green,
+                    ),
+                    onPressed: null,
+                  )
+                ],
+              ),    
               Spacer()
+              
             ],
-          ), 
+          ),
+           
         ),
+        
     );
   }
 }
