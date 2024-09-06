@@ -192,9 +192,8 @@ class _PageBuilderState extends State<PageBuilder> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: const Color.fromARGB(255, 244, 67, 54),
         foregroundColor: Colors.white,
-        bottomOpacity: 100,
         title: Text("Page Builder Test Run"),
       ),
       
@@ -217,8 +216,7 @@ class _PageBuilderState extends State<PageBuilder> {
                 children: [
                   Text("In a cloumn?????"),
                   Text("Really?")
-                ],
-                
+                ],        
               ),
               Spacer()
             ],
