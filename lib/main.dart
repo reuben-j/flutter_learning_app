@@ -25,7 +25,7 @@ class _NavAppState extends State<NavApp> {
       // darkTheme: ThemeData.dark(),
 
       home:
-          const FirstPage(), // due to context's needing to be able to access eachother and layering,
+          const PageBuilder(), // due to context's needing to be able to access eachother and layering,
       // create a new class for first page and implement it like this
       debugShowCheckedModeBanner: false,
     );
@@ -168,7 +168,7 @@ class _FourthPageState extends State<FourthPage> {
               
               child: const Text('Hello, is this working??', 
               style: TextStyle(
-                fontSize: 300,
+                fontSize: 30,
                  
               ),
               ),
@@ -176,6 +176,56 @@ class _FourthPageState extends State<FourthPage> {
           ],
         ),
       )
+    );
+  }
+}
+
+class PageBuilder extends StatefulWidget {
+  const PageBuilder({super.key});
+
+  @override
+  State<PageBuilder> createState() => _PageBuilderState();
+}
+
+class _PageBuilderState extends State<PageBuilder> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+        bottomOpacity: 100,
+        title: Text("Page Builder Test Run"),
+      ),
+      
+        body: const Center(
+          
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+        
+            children: [
+              Spacer(),
+              Text("Hey!"),
+              Spacer(),
+              Text("Middle man :("),
+              Spacer(),
+              Text("Last!"),
+              Spacer(),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text("In a cloumn?"),
+                  Text("Really?")
+                  
+                
+                ],
+                
+              ),
+              Spacer()
+            ],
+          ), 
+        ),
     );
   }
 }
