@@ -150,7 +150,7 @@ class _FourthPageState extends State<FourthPage> {
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(onPressed: () {
                 print("Hello");
-              }, child: const Text("Hello button")),
+              }, child: const Text("Hellooooo button")),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -215,10 +215,8 @@ class _PageBuilderState extends State<PageBuilder> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("In a cloumn?"),
+                  Text("In a cloumn?????"),
                   Text("Really?")
-                  
-                
                 ],
                 
               ),
