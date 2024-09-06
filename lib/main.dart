@@ -165,7 +165,7 @@ class _FourthPageState extends State<FourthPage> {
                 
               ),
             ), Container(
-              alignment: ,
+              
               child: const Text('Hello, is this working?', 
               style: TextStyle(
                 fontSize: 300,
