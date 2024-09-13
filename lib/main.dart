@@ -194,7 +194,7 @@ class _PageBuilderState extends State<PageBuilder> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 244, 67, 54),
         foregroundColor: Colors.white,
-        title: Text("Page Builder Test Run"),
+        title: const Text("Page Builder Test Run"),
       ),
       
         body: const Center(
@@ -205,7 +205,7 @@ class _PageBuilderState extends State<PageBuilder> {
             children: [
               Spacer(),
               Image(image: AssetImage('images/Q8.png'),
-              width: 300,
+              repeat: ImageRepeat.repeat,
               ),
               Spacer(),
               Divider(
@@ -214,21 +214,47 @@ class _PageBuilderState extends State<PageBuilder> {
                 height: 20,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Spacer(),
                   ElevatedButton(
                     style: ButtonStyle(
                     ),
                     onPressed: null,
                     child: Text("Nothing"),
                   ),
+                  Spacer(),
                   ElevatedButton(
                     style: ButtonStyle(
-                      backgroundColor: Colors.green,
                     ),
                     onPressed: null,
-                  )
-                ],
+                    child: Text("Nothing"),
+                  ),
+                  Spacer()
+               ],
               ),    
+              
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Spacer(),
+                  ElevatedButton(
+                    style: ButtonStyle(
+                    ),
+                    onPressed: null,
+                    child: Text("Nothing"),
+                  ),
+                  Spacer(),
+                  ElevatedButton(
+                    style: ButtonStyle(
+                    ),
+                    onPressed: null,
+                    child: Text("Nothing"),
+                  ),
+                  FlutterLogo(size: 50.0),
+                  Spacer()
+               ],
+              ),
               Spacer()
               
             ],
