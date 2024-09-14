@@ -249,7 +249,7 @@ class _PageBuilderState extends State<PageBuilder> {
                     style: ButtonStyle(
                     ),
                     onPressed: null,
-                    child: Text("Nothing"),
+                    child: Text("Nothinng"),
                   ),
                   FlutterLogo(size: 50.0),
                   Spacer()
