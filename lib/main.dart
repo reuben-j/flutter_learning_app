@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dart:math' as math;
 
 void main() {
   runApp(const NavApp());
@@ -189,35 +190,16 @@ class PageBuilder extends StatefulWidget {
 
 class _PageBuilderState extends State<PageBuilder> {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 244, 67, 54),
-        foregroundColor: Colors.white,
-        title: const Text("Page Builder Test Run"),
-      ),
-      
-        body: const Center(
-          
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+  
+   Widget build(BuildContext context) {
+    return Container(
+      height: 40,
+      width: 30,
+      color: Colors.blue,
+      child: const FittedBox(
+        fit: BoxFit.fill,
         
-            children: [
-              Spacer(),
-              Image(image: AssetImage('images/Q8.png'),
-              repeat: ImageRepeat.repeat,
-              ),
-              Spacer(),
-              Divider(
-                color: Colors.black,
-                endIndent: 0,
-                height: 20,
-              ),
-              
-              Spacer()
-            ],
-          ), 
-        ),  
+      ),
     );
   }
 }
