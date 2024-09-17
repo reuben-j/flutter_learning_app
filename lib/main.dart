@@ -166,7 +166,7 @@ class _FourthPageState extends State<FourthPage> {
               ),
             ), Container(
               
-              child: const Text('Hello, is this working??', 
+              child: const Text('Hello, is this workkking??', 
               style: TextStyle(
                 fontSize: 30,
                  
@@ -213,55 +213,11 @@ class _PageBuilderState extends State<PageBuilder> {
                 endIndent: 0,
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Spacer(),
-                  ElevatedButton(
-                    style: ButtonStyle(
-                    ),
-                    onPressed: null,
-                    child: Text("Nothing"),
-                  ),
-                  Spacer(),
-                  ElevatedButton(
-                    style: ButtonStyle(
-                    ),
-                    onPressed: null,
-                    child: Text("Nothing"),
-                  ),
-                  Spacer()
-               ],
-              ),    
               
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Spacer(),
-                  ElevatedButton(
-                    style: ButtonStyle(
-                    ),
-                    onPressed: null,
-                    child: Text("Nothing at all"),
-                  ),
-                  Spacer(),
-                  ElevatedButton(
-                    style: ButtonStyle(
-                    ),
-                    onPressed: null,
-                    child: Text("Nothinng"),
-                  ),
-                  FlutterLogo(size: 55.0),
-                  Spacer()
-               ],
-              ),
               Spacer()
-              
             ],
-          ),
-           
-        ),
-        
+          ), 
+        ),  
     );
   }
 }
